@@ -1,0 +1,12 @@
+// Needed before the bootswatch import. This gets imported again, but that's fine
+@import "bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+
+@import "variables";
+@import "bootswatch/cosmo/variables";
+
+@import "bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "bootswatch/cosmo/bootswatch";
+
+@import "bootstrap-tweaks";
+@import "icons";
+@import "theme";
