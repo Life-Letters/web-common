@@ -19,7 +19,7 @@
     "angular-inspect-html": "Life-Letters/angular-inspect-html#~1.1.1"
   },
   "dependencies": {
-    "bootswatch": "~3.3.6+1",
+    "bootswatch": "~3.3.6",
     "bootstrap-sass": "bootstrap-sass-official#~3.3.6"
   }
 }
