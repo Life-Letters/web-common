@@ -7,6 +7,21 @@ The Life Letters theme, in one convenient package. Includes:
 - mixins
 - an example file
 
+## Usage
+
+Include the `_include.scss` file in your project. 
+
+If you are using a Grunt build, add the following to the copy
+task to handle the font files:
+
+    {
+      expand: true,
+      cwd: '.',
+      src: 'bower_components/theme/fonts/*',
+      dest: '<%= yeoman.dist %>'
+    }
+
+
 
 ## Development
 
