@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'serifabt';
+  src: font-url('#{$theme-font-path}serifabt.eot');
+  src: font-url('#{$theme-font-path}serifabt.eot?#iefix') format('embedded-opentype'), 
+       font-url('#{$theme-font-path}serifabt.woff') format('woff'), 
+       font-url('#{$theme-font-path}serifabt.ttf') format('truetype'), 
+       font-url('#{$theme-font-path}serifabt.svg#serifabt') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
