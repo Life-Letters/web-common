@@ -5,13 +5,13 @@
 @font-face {
 	font-family: 'icomoon';
 	src:
-		font-url('icomoon.eot?-nslsii');
+		font-url('#{$theme-font-path}icomoon.eot?-nslsii');
 	src:
-		font-url('icomoon.eot?#iefix-nslsii') format('embedded-opentype'),
-		font-url('icomoon.woff2?-nslsii') format('woff2'),
-		font-url('icomoon.ttf?-nslsii') format('truetype'),
-		font-url('icomoon.woff?-nslsii') format('woff'),
-		font-url('icomoon.svg?-nslsii#icomoon') format('svg');
+		font-url('#{$theme-font-path}icomoon.eot?#iefix-nslsii') format('embedded-opentype'),
+		font-url('#{$theme-font-path}icomoon.woff2?-nslsii') format('woff2'),
+		font-url('#{$theme-font-path}icomoon.ttf?-nslsii') format('truetype'),
+		font-url('#{$theme-font-path}icomoon.woff?-nslsii') format('woff'),
+		font-url('#{$theme-font-path}icomoon.svg?-nslsii#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
