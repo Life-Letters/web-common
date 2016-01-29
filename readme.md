@@ -22,6 +22,23 @@ task to handle the font files:
     }
 
 
+You can also alter where the fonts are stored using the following 
+SASS variables:
+
+    $theme-font-path: "/foobar/";
+    $icon-font-path: "/foobar/";
+
+
+When using Compass in your grunt script, make sure `bower_components`
+is included via the `importPath`:
+
+    compass: {
+      dev: {
+        options: {
+          importPath: './bower_components',
+          ...
+
+
 
 ## Development
 
