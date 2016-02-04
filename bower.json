@@ -5,7 +5,10 @@
     "Torben Sko <torben.sko@lifeletters.com.au>"
   ],
   "description": "The Life Letters theme",
-  "main": "scss/include.scss",
+  "main": [
+    "scss/include.scss",
+    "scripts/toggleable.js"
+  ],
   "moduleType": [],
   "license": "MIT",
   "ignore": [

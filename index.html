@@ -6,6 +6,30 @@
   </head>
   
   <body ng-controller="MainCtrl">
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6">
+          <h2>Directives.</h2>
+          <h3>Toggleable.</h3>
+          <p>Via <code>toggleable</code> and <code>glyphicon</code>.</p>
+          <div class="well" toggleable>
+            <label>
+              <glyphicon></glyphicon> 
+              <a ng-click="toggle()">Toggle</a> &mdash;
+              <a ng-click="turnOn()">on</a> /
+              <a ng-click="turnOff()">off</a>
+            </label>
+            <p ng-show="isOn()">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, non nobis. Soluta magnam nihil, ea modi!
+            </p>
+          </div><!-- .well -->
+        </div><!-- .col-sm-12 -->
+      </div><!-- .row -->
+    </div><!-- .container-fluid -->
+    
+    <hr>
+
     <div class="bs-component theme-{{ theme }}" ng-repeat="theme in themes">
       <div ng-repeat="variant in themeVersions">
       	<section class="section-themed{{ variant }} padding-md">
@@ -1290,8 +1314,13 @@
     <script src="bower_components/ng-lodash/build/ng-lodash.js"></script>
     <script src="bower_components/js-beautify/js/lib/beautify-html.js"></script>
     <script src="bower_components/angular-inspect-html/angular-inspect-html.js"></script>
+
+    <script src="scripts/toggleable.js"></script>
     <script>
-      angular.module('ThemeApp', ['life.inspectHtml'])
+      angular.module('ThemeApp', [
+          'life.inspectHtml', 
+          'life.theme',
+        ])
         .controller('MainCtrl', function($scope) {
 
           $scope.themeVersions = ['-dark', '', '-light'];
@@ -1425,4 +1454,3 @@
     </script>
   </body>
 </html>
-
