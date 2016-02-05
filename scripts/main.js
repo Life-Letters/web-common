@@ -1,1 +1,1 @@
-angular.module('life.common', []);
+angular.module('life.common', ['life.users']);
