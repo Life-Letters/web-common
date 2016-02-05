@@ -1,6 +1,7 @@
-# Life Letters theme
+# Common Life Letters elements
 
-The Life Letters theme, in one convenient package. Includes:
+This repo includes the Life Letters theme and other common Life Letter components,
+including:
 
 - modified bootstrap theme
 - fonts
@@ -54,3 +55,11 @@ Build the CSS
 Run server
 
     node server.js
+
+Using local versions of bower modules:
+
+    cd {...}/angular-users
+    bower link
+    cd {...}/web-common
+    bower link angular-users
+
