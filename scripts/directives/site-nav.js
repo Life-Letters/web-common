@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('life.common')
-  .directive('siteNav', function (users) {
+  .directive('siteNav', function ($log, users) {
     return {
       template: [
         '<nav class="nav-desktop">',
@@ -49,6 +49,10 @@ angular.module('life.common')
         '</nav>'].join(' '),
       restrict: 'E',
       link: function(scope, element, attrs) {
+        if ( !window.urls || !window.urls.ehr || !window.urls.website ) {
+          $log.error('missing window.urls');
+          return;
+        }
         scope.navItemGrps = 
           [[
             {
