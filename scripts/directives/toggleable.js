@@ -6,7 +6,7 @@
  * @description
  * # toggleable
  */
-angular.module('life.theme', [])
+angular.module('life.common')
   .directive('toggleable', function () {
     return {
   		scope: true,

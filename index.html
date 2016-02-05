@@ -1,11 +1,13 @@
 <!doctype html>
-<html ng-app="ThemeApp">
+<html ng-app="DemoApp">
   <head>
     <title></title>
     <link href="styles/demo.css" rel="stylesheet">
   </head>
   
   <body ng-controller="MainCtrl">
+
+    <site-nav></site-nav>
 
     <div class="container-fluid">
       <div class="row">
@@ -27,8 +29,6 @@
         </div><!-- .col-sm-12 -->
       </div><!-- .row -->
     </div><!-- .container-fluid -->
-    
-    <hr>
 
     <div class="bs-component theme-{{ theme }}" ng-repeat="theme in themes">
       <div ng-repeat="variant in themeVersions">
@@ -1310,17 +1310,26 @@
     </div>
 
     <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <script src="bower_components/ng-lodash/build/ng-lodash.js"></script>
     <script src="bower_components/js-beautify/js/lib/beautify-html.js"></script>
     <script src="bower_components/angular-inspect-html/angular-inspect-html.js"></script>
+    <script src="bower_components/angular-users/scripts/services/users.js"></script>
+    <script src="bower_components/angular-users/scripts/directives/user-switches.js"></script>
 
-    <script src="scripts/toggleable.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/directives/toggleable.js"></script>
+    <script src="scripts/directives/site-nav.js"></script>
     <script>
-      angular.module('ThemeApp', [
+      angular.module('DemoApp', [
           'life.inspectHtml', 
-          'life.theme',
+          'life.common',
+          'life.users',
         ])
+        .config(function(userServiceProvider) {
+          userServiceProvider.setUrl('http://localhost:3000/api/v1/');
+        })
         .controller('MainCtrl', function($scope) {
 
           $scope.themeVersions = ['-dark', '', '-light'];

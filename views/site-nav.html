@@ -1,0 +1,75 @@
+<nav class="nav-desktop">
+  <div class="nav_full" e2e-id="nav_full">
+    <ul class="iconList">
+      <li>
+        <a href="/articles" class="navIcon">
+          <i class="icon icon-off icon-hex-news-outline"></i>
+          <i class="icon icon-on icon-hex-news-solid"></i>
+          <label>Articles</label>
+        </a>
+      </li>
+      <li>
+        <a href="/tests" class="navIcon">
+          <i class="icon icon-off icon-hex-test-outline"></i>
+          <i class="icon icon-on icon-hex-test-solid"></i>
+          <label>Tests</label>
+        </a>
+      </li>
+    </ul><!-- .iconList -->
+
+    <ul class="iconList">
+      <li show-anonymous>
+        <a href="/login" class="navIcon">
+          <i class="icon icon-off icon-hex-user-outline"></i>
+          <i class="icon icon-on icon-hex-user-solid"></i>
+          <label>Login</label>
+        </a>
+      </li>
+      <li show-user>
+        <a href="/logout" class="navIcon">
+          <i class="icon icon-off icon-hex-user-outline"></i>
+          <i class="icon icon-on icon-hex-user-solid"></i>
+          <label>Logout</label>
+        </a>
+      </li>
+    </ul><!-- .iconList -->
+  </div><!-- .nav_full -->
+</nav>
+
+<nav class="nav-mobile" toggleable>
+  <!-- Mobile -->
+  <div class="nav_toggle" e2e-id="nav_toggle" >
+    <a href="javascript:void(0);" ng-click="toggle()">
+      <i class="fa fa-bars"></i>
+      <label>Menu</label>
+    </a>
+  </div>
+
+  <div class="nav_menu" ng-class="{active: isOn()}" e2e-id="nav_menu" >
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-4">
+          <a href="/articles" class="navIcon">
+            <i class="icon icon-off icon-hex-news-outline"></i>
+            <i class="icon icon-on icon-hex-news-solid"></i>
+            <label>Articles</label>
+          </a>
+        </div><!-- .col-xs-6 -->
+      </div><!-- .row -->
+      <hr>
+      <div class="row">
+        <div class="col-xs-4">
+          <a href="/logout" class="navIcon">
+            <i class="icon icon-off icon-hex-user-outline"></i>
+            <i class="icon icon-on icon-hex-user-solid"></i>
+            <label>Logout</label>
+          </a>
+        </div><!-- .col-xs-6 -->
+      </div><!-- .row -->
+    </div><!-- .container-fluid -->
+
+    <a href="javascript:void(0);" class="close" e2e-id="nav_close" ng-click="toggle()">
+      <i class="fa fa-times"></i> Close
+    </a>
+  </div>
+</nav>
