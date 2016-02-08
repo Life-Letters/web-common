@@ -5,22 +5,22 @@
     color: $color;
   }
 
+  .btn-themed {
+    background-color: $colorFaint;
+    color: $colorDark;
+  }
+
   .section-themed {
     background-color: $color;
     color: #fff;
-    
-    &-dark { 
-      background-color: $colorDark;
-      color: $colorFaint;
-    }
 
     h1, h2, blockquote, label, .icon {
       color: $colorFaint;
     }
-
-    .btn-themed {
-      background-color: $colorFaint;
-      color: $colorDark;
+    
+    &-dark { 
+      background-color: $colorDark;
+      color: #fff; //$colorFaint;
     }
 
     &-light { 
