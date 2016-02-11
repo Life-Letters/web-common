@@ -5,3 +5,18 @@
 a {
 	outline: none;
 }
+
+h1, h2, h3, h4 {
+	margin: 0 0 20px 0;
+}
+* + h2,
+* + h3,
+* + h4 {
+  margin-top: -15px;
+}
+
+blockquote {
+	small {
+		margin-top: 15px;
+	}
+}

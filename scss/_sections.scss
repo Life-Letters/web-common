@@ -16,16 +16,6 @@ section {
 	background-size: cover;
 	background-repeat: no-repeat;
 
-	h1, h2, h3, h4 {
-		margin: 0 0 20px 0;
-	}
-	h1 + h2 {
-	  margin-top: -15px;
-	}
-	h2 + h3 {
-	  margin-top: -15px;
-	}
-
 	&.padding {
 		&-lg { @include sectionPadding(150px); }
 		&-md { @include sectionPadding(100px); }
@@ -124,7 +114,10 @@ section {
 // Text modifiers
 .text {
 	&-light {
-		* { color: #eee; }
+		color: #eee;
+		* { 
+			color: #eee; 
+		}
 		a { 
 			color: #fff;
 			font-weight: 600;
@@ -137,26 +130,20 @@ section {
 		}
 	}
 	&-dark {
+		color: #444;
 		* {
-			color: #000 !important;
-		}
-		a {
 			color: #444;
 		}
-	}
-	&-gray {
-		* {
-			color: $gray !important;
+		a {
+			color: #000;
+			font-weight: 600;
+			text-decoration: underline;
 		}
 	}
-	&-gray-darker {
+	&-subtle {
+		color: $gray;
 		* {
-			color: $gray !important;
-		}
-	}
-	&-gray-lighter {
-		* {
-			color: $gray-lighter !important;
+			color: $gray;
 		}
 	}
 	&-xxs 	{ font-size: 30%; }
