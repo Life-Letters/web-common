@@ -28,7 +28,7 @@
     "bootstrap-sass": "bootstrap-sass-official#~3.3.6",
     "font-awesome": "~4.5.0",
     "angular-bootstrap": "~1.1.2",
-    "angular-users": "Life-Letters/angular-users#~0.2.1"
+    "angular-users": "Life-Letters/angular-users"
   },
   "resolutions": {
     "ng-lodash": "~0.4.0",
