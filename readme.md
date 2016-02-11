@@ -39,6 +39,19 @@ is included via the `importPath`:
           importPath: './bower_components',
           ...
 
+If you are using `wiredep` in your Grunt file, you should exclude your bootstrap sass files as
+these are already imported via the web-common (they're imported in a specific order, so it's
+easier to leave it to web-common). To exclude them, add the
+following:
+
+    wiredep: {
+      ...
+      sass: {
+        ...
+        exclude: ['bootstrap-sass'],
+      }
+    },
+
 
 
 ## Development
