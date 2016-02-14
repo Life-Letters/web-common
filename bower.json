@@ -34,8 +34,7 @@
     "font-awesome": "~4.5.0",
     "angular-bootstrap": "~1.1.2",
     "angular-users": "Life-Letters/angular-users",
-    "angular-moment": "^0.10.3",
-    "moment": "^2.11.2"
+    "angular-moment": "^0.10.3"
   },
   "resolutions": {
     "ng-lodash": "~0.4.0",
