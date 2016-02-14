@@ -10,10 +10,11 @@
     "scripts/module.js",
     "scripts/directives/site-nav.js",
     "scripts/directives/toggleable.js",
-    "scripts/directives/date-converter.js",
+    "scripts/directives/store-as-date.js",
     "scripts/directives/edit-cookie.js",
     "scripts/directives/lazy-load.js",
-    "scripts/directives/of-legal-age.js"
+    "scripts/directives/of-legal-age.js",
+    "scripts/filters/age"
   ],
   "moduleType": [],
   "license": "MIT",
@@ -32,10 +33,13 @@
     "bootstrap-sass": "bootstrap-sass-official#~3.3.6",
     "font-awesome": "~4.5.0",
     "angular-bootstrap": "~1.1.2",
-    "angular-users": "Life-Letters/angular-users"
+    "angular-users": "Life-Letters/angular-users",
+    "angular-moment": "^0.10.3",
+    "moment": "^2.11.2"
   },
   "resolutions": {
     "ng-lodash": "~0.4.0",
-    "angular-bootstrap": "~1.1.2"
+    "angular-bootstrap": "~1.1.2",
+    "moment": ">=2.8.0 <2.11.0"
   }
 }

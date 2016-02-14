@@ -5,7 +5,7 @@
  * 
  * Usage:
  *
- * <cookie-preference name="defaultEmail" label="Email"></cookie-preference>
+ * <edit-cookie name="defaultEmail" label="Email"></edit-cookie>
  */
 angular.module('life.common')
   .directive('editCookie', function ($cookies) {

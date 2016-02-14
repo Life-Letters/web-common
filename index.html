@@ -15,6 +15,7 @@
           <h2>Directives.</h2>
           
           <hr>
+
           <h3>Toggleable.</h3>
           <p>Via <code>toggleable</code> and <code>glyphicon</code>.</p>
           <div class="well" toggleable>
@@ -30,6 +31,37 @@
           </div><!-- .well -->
 
           <hr>
+
+          <h3>Edit cookies</h3>
+          <p>Quickly edit the value of cookie. Useful for setting default values.</p>
+          <edit-cookie name="defaultEmail" label="Email"></edit-cookie>
+
+          <hr>
+
+          <h3>DOB</h3>
+          <p>
+            Directives for legal age check and string to date conversion. Also provides
+            an <code>age</code> filter.
+          </p>
+          <form name="dobForm">
+            <div class="form-group" ng-class="{'has-error': dobForm.dob.$invalid}">
+              <label class="control-label">DOB</label>
+              <input type="text" name="dob" class="form-control" placeholder="dd/mm/yyyy"
+                  ng-model="dob"
+                  of-legal-age store-as-date />
+              <p class="help-block" ng-if="dobForm.dob.$error.ofLegalAge">
+                You are not old enough</p>
+            </div>
+          </form>
+          <p>
+            <label for="">Result:</label><br>
+            {{ dob }}<br>
+            {{ dob | date }}<br>
+            {{ dob | age }} years old
+          </p>
+
+          <hr>
+
           <h3>Lazy load</h3>
           <p>Image:</p>
           <img src="https://placeimg.com/640/480/any" lazy-load>
@@ -94,11 +126,17 @@
     <script src="bower_components/angular-users/scripts/module.js"></script>
     <script src="bower_components/angular-users/scripts/services/users.js"></script>
     <script src="bower_components/angular-users/scripts/directives/user-switches.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/angular-moment/angular-moment.js"></script>
 
     <script src="scripts/module.js"></script>
     <script src="scripts/directives/toggleable.js"></script>
     <script src="scripts/directives/site-nav.js"></script>
     <script src="scripts/directives/lazy-load.js"></script>
+    <script src="scripts/directives/edit-cookie.js"></script>
+    <script src="scripts/directives/store-as-date.js"></script>
+    <script src="scripts/directives/of-legal-age.js"></script>
+    <script src="scripts/filters/age.js"></script>
 
     <script>
       window.urls = {
@@ -114,6 +152,11 @@
           usersProvider.setUrl('http://localhost:3000/api/v1/');
         })
         .controller('MainCtrl', function($scope) {
+          $scope.dob = null;
+          $scope.$watch('dob', function() {
+            console.log($scope.dob);
+          });
+
           $scope.themeVersions = ['-dark', '', '-light'];
 
           $scope.themes = [

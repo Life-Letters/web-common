@@ -1,1 +1,4 @@
-angular.module('life.common', ['life.users']);
+angular.module('life.common', [
+	'life.users',
+	'angularMoment'
+]);
