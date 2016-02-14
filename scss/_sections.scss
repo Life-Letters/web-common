@@ -70,11 +70,11 @@ figure {
 	&.align {
 		// On mobile, we don't alter the style
 		@media (min-width: $screen-sm-min) {
-			&-left > div {
+			&-left > * {
 				float: left;
 				margin-right: 20px;
 			}
-			&-right > div {
+			&-right > * {
 				float: right;
 				margin-left: 20px;
 			}
@@ -82,10 +82,9 @@ figure {
 				display: block;
 				padding: 30px 0;
 
-				> div,
-				> blockquote {
-					float: none;
+				> * {
 					display: block;
+					float: none;
 					margin-left: auto;
 					margin-right: auto;
 				}
@@ -94,6 +93,29 @@ figure {
 	}
 	@media (max-width: $screen-xs-max) {
 		padding: 20px 0;
+	}
+}
+
+.btn-frame {
+	&-left {
+		display: inline;
+		> .btn {
+			float: left;
+			margin-right: 10px;
+		}
+	}
+	&-right {
+		display: inline;
+		> .btn {
+			float: right;
+			margin-left: 10px;
+		}
+	}
+	&-full,
+	&-center {
+		padding: 5px 0;
+		display: block;
+		text-align: center;
 	}
 }
 
