@@ -1,6 +1,10 @@
 'use strict';
 
 /**
+ * Maintains a value that can be switched on and off. It can also be
+ * set to an arbitrary value, allowing it to be used to toggle between
+ * multiple values.
+ * 
  * @ngdoc directive
  * @name themeApp.directive:toggleable
  * @description
@@ -12,23 +16,29 @@ angular.module('life.common')
   		scope: true,
       restrict: 'A',
       link: function(scope, element, attrs) {
-        scope.on = false || attrs.toggleable === '1' || attrs.toggleable === 'true';
+        scope.val = attrs.toggleable === '1' || attrs.toggleable === 'true' ? 1 : 0;
       },
       controller: function($scope) {
         $scope.toggle = function() {
-          $scope.on = !$scope.on;
+          $scope.val = !$scope.val;
         };
         $scope.turnOn = function() {
-          $scope.on = true;
+          $scope.val = 1;
         };
         $scope.turnOff = function() {
-          $scope.on = false;
+          $scope.val = 0;
         };
         $scope.isOn = function() {
-          return $scope.on;
+          return $scope.val;
         };
         $scope.isOff = function() {
-          return !$scope.on;
+          return !$scope.val;
+        };
+        $scope.set = function(val) {
+          $scope.val = val;
+        };
+        $scope.is = function(val) {
+          return $scope.val === val;
         };
       }
     };

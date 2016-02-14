@@ -1,3 +1,15 @@
+// Make dropdowns easier to use on mobile devices
+@media (max-width: $screen-sm-max) {
+	.dropdown-menu {
+		padding: 12px 0;
+		> li > a {
+			white-space: normal;
+			padding: 12px 20px;
+		}
+	}
+}
+
+
 .btn {
 	&-white {
 		background: #fff;
