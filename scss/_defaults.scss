@@ -2,6 +2,11 @@
  * Override core HTML.
  */
 
+body, 
+html {
+	height: 100%;
+}
+
 a {
 	outline: none;
 }
