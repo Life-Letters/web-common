@@ -20,10 +20,27 @@
           <p>Via <code>toggleable</code> and <code>glyphicon</code>.</p>
           <div class="well" toggleable>
             <label>
-              <glyphicon></glyphicon> 
-              <a ng-click="toggle()">Toggle</a> &mdash;
+              <glyphicon></glyphicon> <a ng-click="toggle()">Toggle</a> &mdash;
               <a ng-click="turnOn()">on</a> /
               <a ng-click="turnOff()">off</a>
+            </label>
+            <p ng-show="isOn()">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, non nobis. Soluta magnam nihil, ea modi!
+            </p>
+          </div><!-- .well -->
+
+          <div class="well" toggleable="1">
+            <label>
+              <glyphicon></glyphicon> <a ng-click="toggle()">Starts open</a>
+            </label>
+            <p ng-show="isOn()">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, non nobis. Soluta magnam nihil, ea modi!
+            </p>
+          </div><!-- .well -->
+
+          <div class="well" toggleable="0">
+            <label>
+              <glyphicon></glyphicon> <a ng-click="toggle()">Starts closed</a>
             </label>
             <p ng-show="isOn()">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, non nobis. Soluta magnam nihil, ea modi!

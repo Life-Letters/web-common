@@ -12,7 +12,7 @@ angular.module('life.common')
   		scope: true,
       restrict: 'A',
       link: function(scope, element, attrs) {
-        scope.on = false || attrs.toggleable;
+        scope.on = false || attrs.toggleable === '1' || attrs.toggleable === 'true';
       },
       controller: function($scope) {
         $scope.toggle = function() {
