@@ -1,15 +1,19 @@
 'use strict';
 
 angular.module('life.common')
-  .directive('siteNav', function ($log, users) {
+  .directive('siteNav', function ($log, $sce, users) {
     return {
-      templateUrl: 'views/web-common/site-nav.html',
+      template: '<span ng-include="path"></span>',
       restrict: 'E',
+      scope: true,
       link: function(scope, element, attrs) {
         if ( !window.urls || !window.urls.ehr || !window.urls.website ) {
           $log.error('missing window.urls');
           return;
         }
+        scope.path = $sce.trustAsResourceUrl(
+            (window.urls && window.urls.websiteAppViews ? window.urls.websiteAppViews : '')+'views/web-common/site-nav.html');
+
         scope.navItemGrps = 
           [[
             {
