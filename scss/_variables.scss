@@ -2,6 +2,10 @@ $icon-font-path: "/bower_components/bootstrap-sass/assets/fonts/bootstrap/" !def
 $theme-font-path: "/bower_components/web-common/fonts/" !default;
 $fa-font-path: "/bower_components/font-awesome/fonts" !default;
 
+$tinyLetters: #eab232;
+$tinyLetters-light: lighten($tinyLetters, 30%);
+$tinyLetters-dark: darken($tinyLetters, 15%);
+
 // Primary colors:
 $pink: #f173ac;
 $pinkLighter: #f7b7d2;
