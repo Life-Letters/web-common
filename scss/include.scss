@@ -7,13 +7,13 @@
 @import "bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 @import "bootswatch/cosmo/bootswatch";
 
+@import "fonts";
 @import "defaults";
 @import "bootstrap-tweaks";
-@import "fonts";
 @import "mixins";
 @import "icons";
 @import "nav-site";
-@import "nav-page";
+@import "footer";
 @import "modifiers";
 @import "sections";
 @import "lazy-load";

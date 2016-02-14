@@ -1,0 +1,99 @@
+.footer {
+  background-color: #333;
+  padding: 20px 0;
+  font-size: 10pt;
+  font-weight: 300;
+  color: $gray-lighter;
+
+  a {
+    color: #fff;
+    &:hover {
+      color: $gray-lighter;
+    }
+  }
+
+  .foot_logo {
+    font-family: $brand-font-primary;
+    padding-top: 15px;
+    text-align: center;
+    font-size: 20pt;
+
+    .icon {
+      font-size: 120%;
+      position: relative;
+      top: 0.2em;
+    }
+  }
+  .foot_header {
+    border-bottom: 1px solid #666;
+    color: $gray;
+    padding: 10px 0 3px 0;
+    font-weight: 400;
+  }
+  .foot_supportIcon {
+    float: left;
+    font-size: 30pt;
+    margin-right: 10px;
+  }
+  .foot_companyDetails {
+    font-size: 8pt;
+    padding: 10px 0;
+    div {
+      padding-left: 65px;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      text-align: center;
+      div {
+        display: inline;
+        padding-left: 0;
+      }
+    }
+  }
+  ul.foot_iconList {
+    list-style: none;
+    padding: 0;
+
+    li {
+      padding: 2px 0;
+    }
+  }
+  .foot_socialIcon {
+    margin-right: 10px;
+    font-size: 150%;
+    position: relative;
+    top: 0.2em;
+  }
+  .foot_helperLinks {
+    margin-top: 20px;
+    font-size: 90%;
+  }
+
+  form {
+    .help-block {
+      font-weight: 500;
+    }
+    .has-error .help-block {
+      color: $brand-danger;
+    }
+    .has-success .help-block {
+      color: $brand-success;
+    }
+  }
+}
+
+
+ul.inline {
+  list-style: none;
+  padding: 0;
+
+  li {
+    display: inline-block;
+  }
+  li + li {
+    &::before {
+      content: '| ';
+      padding: 0 0.4em;
+    }
+  }
+}

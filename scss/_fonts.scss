@@ -8,3 +8,8 @@
   font-weight: normal;
   font-style: normal;
 }
+
+$brand-font-primary: 'serifabt', $font-family-serif;
+%primary-font {
+	font-family: $brand-font-primary;
+}

@@ -3,50 +3,7 @@
 angular.module('life.common')
   .directive('siteNav', function ($log, users) {
     return {
-      template: [
-        '<nav class="nav-desktop">',
-          '<div class="nav_full" e2e-id="nav_full">',
-            '<ul class="iconList" ng-repeat="itemGrp in navItemGrps">',
-              '<li ng-repeat="item in itemGrp" show-user="{{ item.user }}">',
-                '<a ng-href="{{ item.path }}" class="navIcon">',
-                  '<i class="icon icon-off icon-hex-{{ item.icon }}-outline"></i>',
-                  '<i class="icon icon-on icon-hex-{{ item.icon }}-solid"></i>',
-                  '<label>{{ item.label }}</label>',
-                '</a>',
-              '</li>',
-            '</ul>',
-          '</div>',
-        '</nav>',
-
-        '<nav class="nav-mobile" toggleable>',
-          '<div class="nav_toggle" e2e-id="nav_toggle" >',
-            '<a href="javascript:void(0);" ng-click="toggle()">',
-              '<i class="fa fa-bars"></i>',
-              '<label>Menu</label>',
-            '</a>',
-          '</div>',
-
-          '<div class="nav_menu" ng-class="{active: isOn()}" e2e-id="nav_menu" >',
-            '<div class="container-fluid">',
-              '<span ng-repeat="itemGrp in navItemGrps">',
-                '<hr ng-if="!$first">',
-                '<div class="row">',
-                  '<div class="col-xs-3" ng-repeat="item in itemGrp" show-user="{{ item.user }}">',
-                    '<a ng-href="{{ item.path }}" class="navIcon">',
-                      '<i class="icon icon-off icon-hex-{{ item.icon }}-outline"></i>',
-                      '<i class="icon icon-on icon-hex-{{ item.icon }}-solid"></i>',
-                      '<label>{{ item.label }}</label>',
-                    '</a>',
-                  '</div>',
-                '</div>',
-              '</span>',
-            '</div>',
-
-            '<a href="javascript:void(0);" class="close" e2e-id="nav_close" ng-click="toggle()">',
-              '<i class="fa fa-times"></i> Close',
-            '</a>',
-          '</div>',
-        '</nav>'].join(' '),
+      templateUrl: 'views/web-common/site-nav.html',
       restrict: 'E',
       link: function(scope, element, attrs) {
         if ( !window.urls || !window.urls.ehr || !window.urls.website ) {

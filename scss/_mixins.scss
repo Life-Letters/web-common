@@ -1,4 +1,3 @@
-
 @mixin theme($color, $colorFaint, $colorLight, $colorDark) {
   
   h1, h2, blockquote, label, .icon { 
@@ -66,12 +65,4 @@
 
 .theme-lightText {
   color: #fff;
-}
-
-%themeFont {
-  font-family: 'serifabt', $font-family-serif;
-}
-
-h1, h2 {
-  @extend %themeFont;
 }

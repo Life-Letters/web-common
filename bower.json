@@ -9,6 +9,8 @@
     "scss/include.scss",
     "scripts/module.js",
     "scripts/directives/site-nav.js",
+    "scripts/directives/footer.js",
+    "scripts/directives/mailing-list-form.js",
     "scripts/directives/toggleable.js",
     "scripts/directives/store-as-date.js",
     "scripts/directives/edit-cookie.js",
