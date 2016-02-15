@@ -22,10 +22,20 @@
 		border: 1px solid #000;
 		color: #000;
 
+		&:hover {
+			color: #999;
+			border-color: #999;
+		}
+
 		&.btn-white {
 			border: 1px solid #fff;
 			background: transparent;
 			color: #fff;
+
+			&:hover {
+				color: #aaa;
+				border-color: #aaa;
+			}
 		}
 		&-thick {
 			border-width: 2px;
@@ -66,6 +76,7 @@
 	border-style: solid;
 	background: #fff;
 	color: #000;
+	position: relative;
 
 	.panel-body {
 		color: $gray;

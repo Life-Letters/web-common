@@ -9,6 +9,12 @@
     background-color: $color;
     color: $colorAlt;
     font-weight: 600;
+    transition: background-color 1s, color 1s;
+
+    &:hover {
+      background-color: $colorAlt;
+      color: $color;
+    }
   }
 
   &.bg-themed,
@@ -18,10 +24,12 @@
 
   &.panel-themed,
   .panel-themed {
-    border-color: $colorAlt;
+    border-color: $color;
 
-    .panel-heading {
-      background-color: $colorAlt;
+    .panel-heading,
+    .panel-decoration {
+      background-color: $color;
+      color: lighten($colorAlt, 8%);
     }
   }
 }
@@ -36,9 +44,9 @@
 // .theme-maroon { 		@include theme($maroon, $maroonFaint, $maroonLighter, $maroonDarker); }
 
 
-.theme-tinyLetters        { @include theme($tinyLetters-light, $tinyLetters); }
-.theme-tinyLetters-alt    { @include theme($tinyLetters, $tinyLetters-light); }
-.theme-tinyLetters-alt2   { @include theme($tinyLetters-light, $tinyLetters-dark); }
+.theme-tinyLetters          { @include theme($tinyLetters, $tinyLetters-light); }
+.theme-tinyLetters-alt      { @include theme($tinyLetters-light, $tinyLetters); }
+.theme-tinyLetters-alt2     { @include theme($tinyLetters-light, $tinyLetters-dark); }
 
 .theme-scriptLetters        { @include theme($bluegrayDarker, $bluegrayLighter); }
 .theme-scriptLetters-alt    { @include theme($bluegray, $bluegrayFaint); }
