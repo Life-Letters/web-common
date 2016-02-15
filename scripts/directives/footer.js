@@ -10,7 +10,7 @@ angular.module('life.common')
       scope: true,
       link: function(scope) {
       	scope.path = $sce.trustAsResourceUrl(
-      			(window.urls && window.urls.websiteAppViews ? window.urls.websiteAppViews : '')+'views/web-common/footer.html');
+      			(window.urls && window.urls.webCommon ? window.urls.webCommon : '')+'views/web-common/footer.html');
       }
     };
   });

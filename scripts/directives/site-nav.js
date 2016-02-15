@@ -12,7 +12,7 @@ angular.module('life.common')
           return;
         }
         scope.path = $sce.trustAsResourceUrl(
-            (window.urls && window.urls.websiteAppViews ? window.urls.websiteAppViews : '')+'views/web-common/site-nav.html');
+            (window.urls && window.urls.webCommon ? window.urls.webCommon : '')+'views/web-common/site-nav.html');
 
         scope.navItemGrps = 
           [[
