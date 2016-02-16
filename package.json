@@ -1,22 +1,5 @@
 {
-  "name": "theme",
-  "version": "1.0.0",
-  "description": "The Life Letters theme",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Life-Letters/theme.git"
-  },
-  "author": "Torben Sko",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Life-Letters/theme/issues"
-  },
-  "homepage": "https://github.com/Life-Letters/theme#readme",
+  "name": "web-common",
   "dependencies": {
     "express": "^4.13.3",
     "morgan": "^1.6.1"
