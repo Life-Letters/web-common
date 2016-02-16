@@ -16,7 +16,7 @@
     "scripts/directives/edit-cookie.js",
     "scripts/directives/lazy-load.js",
     "scripts/directives/of-legal-age.js",
-    "scripts/filters/age"
+    "scripts/filters/age.js"
   ],
   "moduleType": [],
   "license": "MIT",
