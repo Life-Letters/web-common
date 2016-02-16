@@ -48,7 +48,7 @@ angular.module('life.common')
               name: 'users',
               label: 'Me',
               icon: 'user',
-              path: window.urls.ehr+'records',
+              path: window.urls.ehr+'record',
               user: 'Patient',
             },{
               name: 'patients',
