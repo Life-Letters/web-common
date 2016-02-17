@@ -1,6 +1,6 @@
 @mixin theme($color, $colorAlt) {
   
-  h1, h2, blockquote, label, .icon { 
+  h1, h2, label, .text-themed { 
     color: $color;
   }
 
@@ -34,15 +34,14 @@
   }
 }
 
-// .theme-purple { 		@include theme($purple, $purpleFaint, $purpleLighter, $purpleDarker); }
-// .theme-yellow { 		@include theme($yellow, $yellowFaint, $yellowLighter, $yellowDarker); }
-// .theme-cyan { 			@include theme($cyan, $cyanFaint, $cyanLighter, $cyanDarker); }
-// .theme-gray { 			@include theme($gray, $grayFaint, $grayLighter, $grayDarker); }
-// .theme-bluegray { 	@include theme($bluegray, $bluegrayFaint, $bluegrayLighter, $bluegrayDarker); }
-// .theme-tangerine {	@include theme($tangerine, $tangerineFaint, $tangerineLighter, $tangerineDarker); }
-// .theme-green { 			@include theme($green, $greenFaint, $greenLighter, $greenDarker); }
-// .theme-maroon { 		@include theme($maroon, $maroonFaint, $maroonLighter, $maroonDarker); }
-
+.theme-cyan       { @include theme($cyan, $cyanLighter); }
+.theme-purple     { @include theme($purple, $purpleLighter); }
+.theme-yellow     { @include theme($yellow, $yellowLighter); }
+.theme-gray       { @include theme($gray, $grayLighter); }
+.theme-bluegray   { @include theme($bluegray, $bluegrayLighter); }
+.theme-tangerine  { @include theme($tangerine, $tangerineLighter); }
+.theme-green      { @include theme($green, $greenLighter); }
+.theme-maroon     { @include theme($maroon, $maroonLighter); }
 
 .theme-tinyLetters          { @include theme($tinyLetters, $tinyLetters-light); }
 .theme-tinyLetters-alt      { @include theme($tinyLetters-light, $tinyLetters); }

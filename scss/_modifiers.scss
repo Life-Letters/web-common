@@ -19,25 +19,22 @@
 // 
 .text {
 	&-light {
-		color: #eee;
-		* { 
-			color: #eee; 
+		p, h1, h2, h3, h4, h5, blockquote, li, td, th, caption, span, div, label {
+			color: #eee; // specifying each type overrides theme colors
 		}
 		a { 
 			color: #fff;
 			font-weight: 600;
 			text-decoration: underline;
-
-			&.btn-outline {
-				border-color: #fff;
-				text-decoration: none;
-			}
+		}
+		.btn-outline {
+			border-color: #fff;
+			text-decoration: none;
 		}
 	}
 	&-dark {
-		color: #444;
-		* {
-			color: #444;
+		p, h1, h2, h3, h4, h5, blockquote, li, td, th, caption, span, div, label {
+			color: #444; // specifying each type overrides theme colors
 		}
 		a {
 			color: #000;
@@ -46,10 +43,10 @@
 		}
 	}
 	&-subtle {
-		color: $gray;
-		* {
-			color: $gray;
-		}
+		opacity: 0.7;
+	}
+	&-center {
+		text-align: center;
 	}
 	&-xxs { font-size: 30%; }
 	&-xs 	{ font-size: 50%; }
