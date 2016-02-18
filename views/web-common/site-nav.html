@@ -3,8 +3,8 @@
     <ul class="iconList" ng-repeat="itemGrp in navItemGrps">
       <li ng-repeat="item in itemGrp" show-user="{{ item.user }}">
         <a ng-href="{{ item.path }}" class="navIcon" ng-class="{active:isActive(item)}">
-          <i class="icon icon-off icon-hex-{{ item.icon }}-outline"></i>
-          <i class="icon icon-on icon-hex-{{ item.icon }}-solid"></i>
+          <i class="text-themed icon icon-off icon-hex-{{ item.icon }}-outline"></i>
+          <i class="text-themed icon icon-on icon-hex-{{ item.icon }}-solid"></i>
           <label>{{ item.label }}</label>
         </a>
       </li>
@@ -26,8 +26,8 @@
         <div class="row">
           <div class="col-xs-3" ng-repeat="item in itemGrp" show-user="{{ item.user }}">
             <a ng-href="{{ item.path }}" class="navIcon" ng-class="{active:isActive(item)}" ng-click="turnOff()">
-              <i class="icon icon-off icon-hex-{{ item.icon }}-outline"></i>
-              <i class="icon icon-on icon-hex-{{ item.icon }}-solid"></i>
+              <i class="text-themed icon icon-off icon-hex-{{ item.icon }}-outline"></i>
+              <i class="text-themed icon icon-on icon-hex-{{ item.icon }}-solid"></i>
               <label>{{ item.label }}</label>
             </a>
           </div>

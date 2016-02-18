@@ -109,7 +109,7 @@ ul.iconList {
 		display: block;
 		opacity: 0;
 
-		transition: opacity 1s, font-size 1s;
+		transition: opacity 1s, font-size 1s, color 1s;
 		font-size: $nav-icon-size-shrunk;
 		line-height: $nav-icon-size-full;
 		&-off { opacity: 1; }
@@ -120,6 +120,7 @@ ul.iconList {
 		font-size: $nav-label-size;
 		font-weight: 600;
 		display: block;
+		transition: color 1s;
 	}
 
 	// Highlight the icon
