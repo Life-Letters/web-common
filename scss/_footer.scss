@@ -13,7 +13,7 @@
   }
 
   .foot_logo {
-    font-family: $brand-font-primary;
+    @extend %companyName;
     padding-top: 15px;
     text-align: center;
     font-size: 20pt;

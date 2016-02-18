@@ -1,5 +1,9 @@
 <nav class="nav-desktop">
   <div class="nav_full" e2e-id="nav_full">
+    <a class="nav-brand text-themed" ng-href="{{ home }}">
+      <i class="icon-LifeLetters-logo"></i> <span>life</span><span>letters</span>
+    </a>
+
     <ul class="iconList" ng-repeat="itemGrp in navItemGrps">
       <li ng-repeat="item in itemGrp" show-user="{{ item.user }}">
         <a ng-href="{{ item.path }}" class="navIcon" ng-class="{active:isActive(item)}">

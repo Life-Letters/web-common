@@ -23,6 +23,7 @@ angular.module('life.common')
         scope.path = $sce.trustAsResourceUrl(
             (window.urls && window.urls.webCommon ? window.urls.webCommon : '')+'views/web-common/site-nav.html');
 
+        scope.home = window.urls.website;
         scope.navItemGrps = 
           [[
             {
