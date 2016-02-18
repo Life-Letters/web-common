@@ -30,7 +30,7 @@ angular.module('life.common')
               name: 'referrals',
               label: 'Referral',
               icon: '123',
-              path: window.urls.website+'referrals',
+              path: window.urls.ehr+'referrals',
             },{
               name: 'help',
               label: 'Help',
