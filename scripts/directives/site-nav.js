@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('life.common')
-  .directive('siteNav', function ($log, $sce, users) {
+  .directive('siteNav', function ($log, $sce, $rootScope, users) {
     return {
       template: '<span ng-include="path"></span>',
       restrict: 'E',
@@ -11,6 +11,15 @@ angular.module('life.common')
           $log.error('missing window.urls');
           return;
         }
+
+        var active = attrs.highlight || '';
+        scope.isActive = function(name) {
+          return name === active;
+        };
+        $rootScope.$on('nav:highlight', function(evt, name) {
+          active = name;
+        });
+
         scope.path = $sce.trustAsResourceUrl(
             (window.urls && window.urls.webCommon ? window.urls.webCommon : '')+'views/web-common/site-nav.html');
 
