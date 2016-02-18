@@ -13,8 +13,8 @@ angular.module('life.common')
         }
 
         var active = attrs.highlight || '';
-        scope.isActive = function(name) {
-          return name === active;
+        scope.isActive = function(item) {
+          return item.name === active || item.page === active;
         };
         $rootScope.$on('nav:highlight', function(evt, name) {
           active = name;
@@ -27,6 +27,7 @@ angular.module('life.common')
           [[
             {
               name: 'tests',
+              page: 'pagesProducts',
               label: 'Tests',
               icon: 'test',
               path: window.urls.website+'tests',

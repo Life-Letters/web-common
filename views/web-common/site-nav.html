@@ -2,7 +2,7 @@
   <div class="nav_full" e2e-id="nav_full">
     <ul class="iconList" ng-repeat="itemGrp in navItemGrps">
       <li ng-repeat="item in itemGrp" show-user="{{ item.user }}">
-        <a ng-href="{{ item.path }}" class="navIcon" ng-class="{active:isActive(item.name)}">
+        <a ng-href="{{ item.path }}" class="navIcon" ng-class="{active:isActive(item)}">
           <i class="icon icon-off icon-hex-{{ item.icon }}-outline"></i>
           <i class="icon icon-on icon-hex-{{ item.icon }}-solid"></i>
           <label>{{ item.label }}</label>
@@ -25,7 +25,7 @@
         <hr ng-if="!$first">
         <div class="row">
           <div class="col-xs-3" ng-repeat="item in itemGrp" show-user="{{ item.user }}">
-            <a ng-href="{{ item.path }}" class="navIcon">
+            <a ng-href="{{ item.path }}" class="navIcon" ng-class="{active:isActive(item)}">
               <i class="icon icon-off icon-hex-{{ item.icon }}-outline"></i>
               <i class="icon icon-on icon-hex-{{ item.icon }}-solid"></i>
               <label>{{ item.label }}</label>
