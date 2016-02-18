@@ -1,5 +1,6 @@
 $nav-icon-size-shrunk: 50px;
 $nav-icon-size-full: 56px;
+$nav-label-size: 13px;
 
 
 // Desktop
@@ -18,13 +19,17 @@ $nav-icon-size-full: 56px;
 }
 
 .nav-offset {
-	height: $nav-icon-size-full;
-	@media (max-width: $screen-sm-max) { display: none; }	
+	height: $nav-icon-size-full+$nav-label-size+5px;
+	transtion: height 0.5s;
+	// @media (max-width: $screen-sm-max) { display: none; }	
 }
 
 
 .nav-mobile {
 	@include clearfix;
+	position: absolute;
+	width: 100%;
+	z-index: 1000;
 
 	.nav_toggle {
 		$size: 50px;
@@ -38,7 +43,7 @@ $nav-icon-size-full: 56px;
 		}
 		label {
 			display: block;
-			font-size: 10pt;
+			font-size: $nav-label-size;
 		}
 	}
 
@@ -84,7 +89,7 @@ ul.iconList {
 	li {
 		position: relative;
 		display: inline-block;
-		margin-right: 5px;
+		margin-right: 7px;
 		width: $nav-icon-size-full - 5px;
 	}
 }
@@ -112,7 +117,7 @@ ul.iconList {
 	}
 
 	label {
-		font-size: 10pt;
+		font-size: $nav-label-size;
 		font-weight: 600;
 		display: block;
 	}
