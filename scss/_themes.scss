@@ -16,6 +16,9 @@
       color: $color;
     }
   }
+  .list-group-item.active {
+    background-color: $color;
+  }
 
   &.bg-themed,
   .bg-themed {
