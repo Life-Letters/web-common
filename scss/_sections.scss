@@ -94,8 +94,8 @@ figure {
 		margin: 30px 0;
 	}
 	
-	> [class^="col-"], 
-	> [class*=" col-"] {
+	> div[class^="col-"], 
+	> div[class*=" col-"] {
 		padding-left: 0;
 		padding-right: 0;
 	}
