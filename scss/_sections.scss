@@ -5,8 +5,16 @@
 		padding-bottom: $size;
 
 		@media (max-width: $screen-xs-max) {
-			padding-top: 0.5*$size;
-			padding-bottom: 0.5*$size;
+			padding-top: $size*0.5;
+			padding-bottom: $size*0.5;
+		}
+	}
+	&.layered {
+		> .container,
+		> .container-fluid {
+			@media (max-width: $screen-xs-max) {
+				padding-top: $size*0.4;
+			}
 		}
 	}
 }
@@ -194,7 +202,7 @@ figure {
 	@media (max-width: $screen-xs-max) {
 		position: relative;
 		height: 200px;
-		margin-bottom: -40px;
+		// margin-bottom: -40px;
 		opacity: 1;
 	}
 }
