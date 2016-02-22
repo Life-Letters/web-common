@@ -17,9 +17,12 @@
 </nav>
 
 <nav class="nav-mobile" toggleable>
-  <div class="nav_toggle" e2e-id="nav_toggle" >
+  <a class="nav-brand text-themed" ng-href="{{ home }}">
+    <i class="icon-LifeLetters-logo"></i> <span>life</span><span>letters</span>
+  </a>
+  <div class="nav_toggle" e2e-id="nav_toggle">
     <a href="javascript:void(0);" ng-click="toggle()">
-      <i class="fa fa-bars"></i>
+      <i class="fa fa-bars text-themed"></i>
       <label>Menu</label>
     </a>
   </div>
