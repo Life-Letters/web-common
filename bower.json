@@ -35,7 +35,7 @@
     "bootstrap-sass": "bootstrap-sass-official#~3.3.6",
     "font-awesome": "~4.5.0",
     "angular-bootstrap": "~1.1.2",
-    "angular-users": "Life-Letters/angular-users",
+    "angular-users": "Life-Letters/angular-users#~0.6.1",
     "angular-moment": "^0.10.3"
   },
   "resolutions": {
