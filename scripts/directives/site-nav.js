@@ -57,6 +57,12 @@ angular.module('life.common')
               path: window.urls.ehr+'patients',
               user: 'Clinician',
             },{
+              name: 'actions',
+              label: 'Actions',
+              icon: 'report',
+              path: window.urls.ehr+'actions',
+              user: 'Clinician',
+            },{
               name: 'refer',
               label: 'Refer',
               icon: '123',
