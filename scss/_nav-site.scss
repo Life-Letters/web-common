@@ -33,7 +33,7 @@ $nav-label-size: 13px;
 }
 
 .nav-offset {
-	height: $nav-icon-size-full+$nav-label-size+15px;
+	height: $nav-icon-size-full+$nav-label-size+25px;
 	transtion: height 0.5s;
 	// @media (max-width: $screen-sm-max) { display: none; }	
 }
