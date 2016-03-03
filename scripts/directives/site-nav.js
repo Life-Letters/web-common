@@ -20,6 +20,14 @@ angular.module('life.common')
           active = name;
         });
 
+        scope.isNavOn = false;
+        scope.showNav = function() { scope.isNavOn = true; };
+        scope.hideNav = function() { scope.isNavOn = false; };
+
+        $rootScope.$on('$locationChangeStart', function(evt, newUrl, oldUrl) {
+          scope.hideNav();
+        });
+
         scope.path = $sce.trustAsResourceUrl(
             (window.urls && window.urls.webCommon ? window.urls.webCommon : '')+'views/web-common/site-nav.html');
 
@@ -27,6 +35,12 @@ angular.module('life.common')
         scope.navItemGrps = 
           [[
             {
+              name: 'home',
+              page: 'pagesProducts',
+              label: 'Home',
+              logo: 'LifeLetters',
+              path: window.urls.website,
+            },{
               name: 'tests',
               page: 'pagesProducts',
               label: 'Tests',
