@@ -32,7 +32,7 @@
         <hr ng-if="!$first">
         <div class="row">
           <div class="col-xs-2" ng-repeat="item in itemGrp" show-user="{{ item.user }}">
-            <a ng-href="{{ item.path }}" class="navIcon" ng-class="{active:isActive(item)}" ng-click="turnOff()">
+            <a ng-href="{{ item.path }}" class="navIcon" ng-class="{active:isActive(item)}">
               <i ng-if="item.icon" class="text-themed icon icon-off icon-hex-{{ item.icon }}-outline"></i>
               <i ng-if="item.icon" class="text-themed icon icon-on icon-hex-{{ item.icon }}-solid"></i>
               <i ng-if="item.logo" class="text-themed icon icon-off icon-{{ item.logo }}-logo"></i>
