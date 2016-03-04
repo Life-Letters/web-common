@@ -38,6 +38,7 @@ angular.module('life.common')
 	        	return '';
 	        }
 	        var retVal = moment(modelValue).format(dateFormat);
+	        console.log(retVal);
 	        return retVal;
 	      });
 
@@ -45,6 +46,10 @@ angular.module('life.common')
 	        var date = moment(viewValue, dateFormat);
 	        return (date && date.isValid()) ? date.toDate() : '';
 	      });
+
+	      ctrl.$validators.isValidDate = function(modelValue, viewValue) {
+	        return moment(viewValue, dateFormat).isValid();
+	      };
 	    }
 	  };
 	});

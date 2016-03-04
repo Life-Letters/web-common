@@ -15,8 +15,10 @@ angular.module('life.common')
       restrict: 'A',
       require: 'ngModel',
       link: function postLink(scope, element, attrs, ctrl) {
+        console.log('hey');
         ctrl.$validators.ofLegalAge = function(modelValue, viewValue) {
 	        var b = moment(viewValue, attrs.ofLegalAge || 'DD/MM/YYYY');
+          console.log(b, moment().diff(b, 'years'));
 					return moment().diff(b, 'years') > 18;
 	      };
       }
