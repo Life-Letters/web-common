@@ -38,7 +38,6 @@ angular.module('life.common')
 	        	return '';
 	        }
 	        var retVal = moment(modelValue).format(dateFormat);
-	        console.log(retVal);
 	        return retVal;
 	      });
 
