@@ -82,11 +82,23 @@ angular.module('life.common')
               path: window.urls.ehr+'patients',
               user: 'Clinician',
             },{
+              name: 'patients',
+              label: 'Patients',
+              icon: 'report',
+              path: window.urls.ehr+'patients',
+              user: 'Counsellor',
+            },{
               name: 'refer',
               label: 'Refer',
               icon: '123',
               path: window.urls.ehr+'refer',
               user: 'Clinician',
+            },{
+              name: 'refer',
+              label: 'Refer',
+              icon: '123',
+              path: window.urls.ehr+'refer',
+              user: 'Counsellor',
             },{
               name: 'logout',
               label: 'Logout',
