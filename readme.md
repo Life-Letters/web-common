@@ -1,3 +1,12 @@
+## Please note: this repository is deprecated.
+
+The logic within this project has since been split into the following projects:
+
+- [life-theme](https://github.com/Life-Letters/life-theme): the Life Letters theme, consisting of a bootstrap theme and assets (e.g. fonts, icons).
+- [angular-common](https://github.com/Life-Letters/angular-common): generic Angular logic.
+
+--
+
 # Common Life Letters elements
 
 This repo includes the Life Letters theme and other common Life Letter components,
